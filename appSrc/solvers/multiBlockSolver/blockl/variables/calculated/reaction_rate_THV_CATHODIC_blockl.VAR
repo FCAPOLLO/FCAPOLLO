@@ -1,0 +1,17 @@
+reaction_rate_THV_CATHODIC_blockl.set
+(
+	zoneID,
+	new volScalarField
+	(
+  	 	IOobject
+		(
+	       	"reaction_rate_THV_CATHODIC",
+		  	runTime.timeName(),
+       	   	blocklRegions[zoneID],
+       	   	IOobject::READ_IF_PRESENT,
+       		IOobject::AUTO_WRITE
+		),
+		blocklRegions[zoneID],
+		dimensionedScalar("reaction_rate_THV_CATHODIC_init", dimensionSet( 0,-3, 0, 0, 0, 1, 0 ), 0.0)
+	)
+);

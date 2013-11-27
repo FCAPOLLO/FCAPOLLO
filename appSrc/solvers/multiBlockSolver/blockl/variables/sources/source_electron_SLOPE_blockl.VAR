@@ -1,0 +1,17 @@
+source_electron_SLOPE_blockl.set
+(
+	zoneID,
+	new volScalarField
+	(
+  	 	IOobject
+		(
+	       	"source_electron_SLOPE",
+		  	runTime.timeName(),
+       	   	blocklRegions[zoneID],
+       	   	IOobject::READ_IF_PRESENT,
+       		IOobject::AUTO_WRITE
+		),
+		blocklRegions[zoneID],
+		dimensionedScalar("source_electron_SLOPE_init", dimensionSet(-1,-5, 3, 0, 0, 2, 0 ), 0.0)
+	)
+);

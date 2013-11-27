@@ -1,0 +1,17 @@
+source_proton_total_blockl.set
+(
+	zoneID,
+	new volScalarField
+	(
+  	 	IOobject
+		(
+	       	"source_proton_total",
+		  	runTime.timeName(),
+       	   	blocklRegions[zoneID],
+       	   	IOobject::READ_IF_PRESENT,
+       		IOobject::AUTO_WRITE
+		),
+		blocklRegions[zoneID],
+		dimensionedScalar("source_proton_total_init", dimensionSet( 0,-3, 0, 0, 0, 1, 0 ), 0.0)
+	)
+);

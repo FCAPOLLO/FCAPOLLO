@@ -1,0 +1,17 @@
+sigma_e_eff_blockr.set
+(
+    zoneID,
+    new volTensorField
+    (
+    	IOobject
+        (
+	  		"sigma_e_eff",
+	  		runTime.timeName(),
+	  		blockrRegions[zoneID],
+	  		IOobject::READ_IF_PRESENT,
+	  		IOobject::AUTO_WRITE
+	 	),
+	 	blockrRegions[zoneID], 
+	 	dimensionedTensor("sigma_e_init", dimensionSet(-1, -3, 3, 0, 0, 2, 0), tensor::zero)
+    )
+);

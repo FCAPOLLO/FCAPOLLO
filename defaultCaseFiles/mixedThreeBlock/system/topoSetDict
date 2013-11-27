@@ -1,0 +1,87 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+// block_left
+	{
+	        name    block_l;
+	        type    cellSet;
+	        action  new;
+	        source  boxToCell;
+	        sourceInfo
+	        {
+			box (0 0 0)(5e-6 1.e-6 1.e-6);
+	        }
+	}
+	{
+	        name    block_l;
+	        type    cellZoneSet;
+	        action  new;
+	        source  setToCellZone;
+	        sourceInfo
+	        {
+	            set block_l;	// name of cellSet is block_left
+	        }
+	}
+
+// block_centre
+	{
+		name	block_c;
+		type	cellSet;
+		action	new;
+		source	boxToCell;
+		sourceInfo
+		{
+			box (5e-6 0 0)(25e-6 1.e-6 1.e-6);
+		}
+	}
+	{
+		name	block_c;
+		type	cellZoneSet;
+		action	new;
+		source	setToCellZone;
+		sourceInfo
+		{
+			set block_c;	// name of cellSet is block_centre
+		}
+	}
+
+// block_right
+	{
+		name	block_r;
+		type	cellSet;
+		action	new;
+		source	boxToCell;
+		sourceInfo
+		{
+			box (25e-6 0 0)(30e-6 1.e-6 1.e-6);
+		}
+	}
+	{
+		name	block_r;
+		type	cellZoneSet;
+		action	new;
+		source	setToCellZone;
+		sourceInfo
+		{
+			set block_r;	// name of cellSet is block right
+		}
+	}
+);
+
+// ************************************************************************* //

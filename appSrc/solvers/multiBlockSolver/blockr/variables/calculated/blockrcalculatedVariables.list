@@ -1,0 +1,8 @@
+#include "eta_act_blockr.VAR"
+#include "proton_flux_blockr.VAR"
+#include "electron_flux_blockr.VAR"
+#include "reaction_rate_BV_ANODIC_blockr.VAR"
+#include "reaction_rate_BV_CATHODIC_blockr.VAR"
+#include "reaction_rate_BV_SLOPE_ELECTRON_blockr.VAR"
+#include "reaction_rate_BV_SLOPE_PROTON_blockr.VAR"
+#include "reaction_rate_BV_SUM_blockr.VAR"

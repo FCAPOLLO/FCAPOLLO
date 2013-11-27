@@ -1,0 +1,17 @@
+xCoord_blockr.set
+(
+	zoneID,
+	new volScalarField
+	(
+  	 	IOobject
+		(
+	        "xCoord",
+		   	runTime.timeName(),
+       		blockrRegions[zoneID],
+       		IOobject::NO_READ,
+       		IOobject::AUTO_WRITE
+		),
+		blockrRegions[zoneID],
+		dimensionedScalar("xCoord_init", dimensionSet( 0, 1, 0, 0, 0, 0, 0 ), 0.0)
+	)
+);

@@ -1,0 +1,16 @@
+phi_e_test_blockl.set
+(
+	zoneID,
+    new volScalarField
+    (
+    	IOobject
+        (
+        	"phi_e",
+            runTime.timeName(),
+            blocklRegions[zoneID],
+            IOobject::MUST_READ,
+            IOobject::AUTO_WRITE
+		),
+        blocklRegions[zoneID]                
+	)
+);

@@ -1,0 +1,31 @@
+FCAPOLLO_LIB = $(WM_PROJECT_USER_DIR)/FCAPOLLO/libSrc
+
+EXE_INC = \
+    -Iblockl \
+    -Iblockl/variables/solved \
+    -Iblockl/variables/coefficients \
+    -Iblockl/variables/sources \
+	-Iblockl/variables/calculated \
+    -Iblockc \
+    -Iblockc/variables/solved \
+    -Iblockc/variables/coefficients \
+    -Iblockc/variables/sources \
+	-Iblockc/variables/calculated \
+    -Iblockr \
+    -Iblockr/variables/solved \
+    -Iblockr/variables/coefficients \
+    -Iblockr/variables/sources \
+	-Iblockr/variables/calculated \
+    -IconvergenceChecking \
+    -Iinclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+	-I$(LIB_SRC)/fvOptions/lnInclude \
+	-I$(LIB_SRC)/regionModels/regionModel/lnInclude \
+	-I$(FCAPOLLO_LIB)/src/lnInclude
+EXE_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lmeshTools \
+    -lfiniteVolume \
+	-lregionModels \
+    -lFCAPOLLO 

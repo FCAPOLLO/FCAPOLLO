@@ -1,0 +1,4 @@
+#include "source_electron_total_blockr.VAR"
+#include "source_electron_SLOPE_blockr.VAR"
+#include "source_proton_total_blockr.VAR"
+#include "source_proton_SLOPE_blockr.VAR"

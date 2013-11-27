@@ -1,0 +1,17 @@
+source_electron_total_blockr.set
+(
+	zoneID,
+	new volScalarField
+	(
+  	 	IOobject
+		(
+	       	"source_electron_total",
+		  	runTime.timeName(),
+       	   	blockrRegions[zoneID],
+       	   	IOobject::READ_IF_PRESENT,
+       		IOobject::AUTO_WRITE
+		),
+		blockrRegions[zoneID],
+		dimensionedScalar("source_electron_total_init", dimensionSet( 0,-3, 0, 0, 0, 1, 0 ), 0.0)
+	)
+);

@@ -1,0 +1,26 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+sigma_e			sigma_e 	[  -1  -3   3   0   0   2   0 ] 1000.;
+sigma_p			sigma_p		[  -1  -3   3   0   0   2   0 ] 10.;
+source_term		source_term [   0  -3   0   0   0   1   0 ] 1.e4;
+tor_x			tor_x		[   0   0   0   0   0   0   0 ] 1.;
+tor_y			tor_y		[   0   0   0   0   0   0   0 ] 1.;
+tor_z			tor_z		[   0   0   0   0   0   0   0 ] 1.;
+
+
+// ************************************************************************* //

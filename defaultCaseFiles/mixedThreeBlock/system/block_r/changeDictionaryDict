@@ -1,0 +1,81 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      changeDictionaryDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dictionaryReplacement
+{
+    boundary
+    {
+        wall_r 
+        {
+            type            patch;
+        }
+		wall_empty
+		{
+	 		type             empty;
+		}
+    }
+
+    phi_e
+    {
+        internalField   uniform 0.5;
+
+        boundaryField
+        {
+            wall_r
+            {
+                type            uniformFixedValue;
+				uniformValue	tableFile;
+				tableFileCoeffs
+				{
+    				fileName     "$FOAM_CASE/operatingConditions/cathodeVoltage"
+    				outOfBounds  clamp;
+				}
+ 	        }
+	    	wall_empty
+	    	{
+  				type			empty;
+	    	}
+	    	"block_r_to_block_c"
+  			{
+				type			zeroGradient;
+			}
+		}
+	}
+
+    phi_p
+    {
+        internalField   uniform 0.0;
+
+        boundaryField
+        {
+            wall_r
+            {
+				type			zeroGradient;
+            }
+	    	wall_empty
+	    	{
+  				type			empty;
+	    	}
+	    	"block_r_to_block_c"
+  			{
+				type			FCAPOLLO::interiorMixedScalarTensor;
+				transportCoeff	sigma_p_eff;
+			}
+		}
+	}
+}
+
+// ************************************************************************* //

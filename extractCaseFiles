@@ -1,0 +1,1 @@
+cp -r ./defaultCaseFiles/mixedThreeBlock $FOAM_RUN/mixedThreeBlockCase

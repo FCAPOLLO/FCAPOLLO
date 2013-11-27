@@ -1,0 +1,17 @@
+eta_act_blockr.set
+(
+	zoneID,
+	new volScalarField
+	(
+  	 	IOobject
+		(
+	        "eta_act",
+		   	runTime.timeName(),
+       		blockrRegions[zoneID],
+       		IOobject::READ_IF_PRESENT,
+       		IOobject::AUTO_WRITE
+		),
+		blockrRegions[zoneID],
+		dimensionedScalar("eta_act_init", dimensionSet( 1, 2, -3, 0, 0, -1, 0 ), 0.0)
+	)
+);

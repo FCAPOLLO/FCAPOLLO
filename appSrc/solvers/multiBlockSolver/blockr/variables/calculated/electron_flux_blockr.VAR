@@ -1,0 +1,17 @@
+electron_flux_blockr.set
+(
+	zoneID,
+	new surfaceScalarField
+	(
+  	 	IOobject
+		(
+	       	"electron_flux",
+		  	runTime.timeName(),
+       	   	blockrRegions[zoneID],
+       	   	IOobject::READ_IF_PRESENT,
+       		IOobject::NO_WRITE
+		),
+		blockrRegions[zoneID],
+		dimensionedScalar("electron_flux_init", dimensionSet( 0, 0, 0, 0, 0, 1, 0 ), 0.0)
+	)
+);
