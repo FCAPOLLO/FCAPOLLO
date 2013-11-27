@@ -13,7 +13,9 @@ Notes:
 Warning:
 - In this version the THV kinetics are unstable and the option should be left using the butler-volmer formulation for the anode.
 
-Setup:
+Setup/Install:
+- Install:
+    - Extract the repository in $WM_PROJECT_USER_DIR
 - Environment:
     - Running scripts have been setup for bash environments
     - please add the following to your .bashrc or .bash_profile
