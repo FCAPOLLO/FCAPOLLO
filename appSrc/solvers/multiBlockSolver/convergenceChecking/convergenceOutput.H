@@ -171,7 +171,7 @@ forAll(blockrRegions, zoneID)
 		<< std::setw(16) << "Total Time"
 		<< "\n"
 		<< std::setw(12) << counter
-		<< std::setw(16) << std::setprecision(4) << currentDensityDiff
+		<< std::setw(16) << std::setprecision(4)
 		<< std::setw(16) << currentDensityDiff
 		<< std::setw(16) << deltaTime
 		<< std::setw(16) << totalTime
