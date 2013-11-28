@@ -65,7 +65,7 @@ do
 		echo -ne "      "$i
 		cp system/decomposeParDict system/$i/.	
 	done
-done <regions.list
+done <regions.lst
 
 echo
 echo "decomposing the multi-domain mesh for parallel"

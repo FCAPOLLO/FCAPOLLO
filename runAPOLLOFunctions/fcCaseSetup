@@ -55,7 +55,7 @@ do
 	do
 		changeDictionary -region $i > log.changeDictionary.$i 2>&1
 	done
-done <regions.list
+done <regions.lst
 # inform user that the process is complete
 echo
 echo

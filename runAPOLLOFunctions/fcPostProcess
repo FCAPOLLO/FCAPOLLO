@@ -40,7 +40,7 @@ do
 		echo -ne "    " $i
 		foamToVTK -region $i > log.foamToVTK.$i 2>&1
 	done
-done
+done < regions.lst
 echo
 echo "done"
 echo

@@ -63,7 +63,7 @@ do
 	do
 		rm -rf constant/$i/polyMesh
 	done
-done <regions.list
+done <regions.lst
 echo
 # Clean the dictionary files placed into 0/
 echo "Cleaning applied boundary conditions and initial fields:"
@@ -74,7 +74,7 @@ do
 	do
 		rm -rf 0/$i
 	done
-done <regions.list
+done <regions.lst
 echo
 echo "done"
 echo
@@ -90,7 +90,7 @@ do
 			rm -f system/$i/decomposeParDict
 		fi
 	done
-done <regions.list
+done <regions.lst
 echo "done"
 echo
 # Clean the previous run data, note this was done with the cleanCase command
