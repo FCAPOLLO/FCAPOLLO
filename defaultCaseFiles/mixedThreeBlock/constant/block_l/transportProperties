@@ -16,7 +16,7 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 sigma_e			sigma_e 		[  -1  -3   3   0   0   2   0 ] 1000.;
-sigma_p			sigma_p			[  -1  -3   3   0   0   2   0 ] 0.001;
+sigma_p			sigma_p			[  -1  -3   3   0   0   2   0 ] 0.1;
 source_termTHV	source_termTHV 	[   0  -3   0   0   0   1   0 ] 1.e10;
 source_termBV   source_termBV	[   0  -3   0   0   0   1   0 ] 1.e10;
 tor_x			tor_x			[   0   0   0   0   0   0   0 ] 1.;
