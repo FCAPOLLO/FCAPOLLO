@@ -5,7 +5,8 @@ set -ue
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 # Reconstruct
 echo -e "\e[1;34m---------- Recompose the case file ----------\e[0m"
-echo# Test if directory location is valid
+echo
+# Test if directory location is valid
 if [[ ! -d $PWD/constant || ! -d $PWD/system ]]
 	then
 	{
