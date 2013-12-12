@@ -21,11 +21,11 @@ writeInterval		1;
 solverMethod		implicit;
 //equationSystem	separate;
 equationSystem		together;
-implicitFactor		50.;
+implicitFactor		100.;
 protonSweep		 	1;
 electronSweep    	1;
 THV					-1;  				// 1 uses THV, -1 uses BV 
-currentTolerance 	1.e-5;
+currentTolerance 	1.e-3;
 etaBlockl		 	0.015;
 etaBlockr			-0.45;
 
