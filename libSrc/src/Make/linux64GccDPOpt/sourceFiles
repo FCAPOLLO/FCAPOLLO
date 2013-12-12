@@ -1,0 +1,3 @@
+SOURCE = \
+$(derivedFvPatchFields)/interiorScalarTensor/interiorTFvPatchScalarField.C\
+$(derivedFvPatchFields)/interiorMixedScalarTensor/interiorTMixedFvPatchScalarField.C

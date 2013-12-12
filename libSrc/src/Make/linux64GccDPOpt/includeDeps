@@ -1,0 +1,2 @@
+include $(derivedFvPatchFields)/interiorScalarTensor/interiorTFvPatchScalarField.dep
+include $(derivedFvPatchFields)/interiorMixedScalarTensor/interiorTMixedFvPatchScalarField.dep

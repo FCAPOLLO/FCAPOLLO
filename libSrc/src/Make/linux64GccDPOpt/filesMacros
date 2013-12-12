@@ -1,0 +1,2 @@
+derivedFvPatchFields = fields/derivedFvPatchFields
+LIB = $(FOAM_USER_LIBBIN)/libFCAPOLLO

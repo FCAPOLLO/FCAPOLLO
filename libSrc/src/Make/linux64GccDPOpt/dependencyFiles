@@ -1,0 +1,3 @@
+DEPENDENCIES = \
+$(derivedFvPatchFields)/interiorScalarTensor/interiorTFvPatchScalarField.dep\
+$(derivedFvPatchFields)/interiorMixedScalarTensor/interiorTMixedFvPatchScalarField.dep

@@ -41,12 +41,14 @@ if stat -t *.cas >/dev/null 2>&1;
 	then
 	{
 		mv -v *.cas .fcapollo/.
-		cleanCase
+        cleanTimeDirectories
+        rm -rf processor* > /dev/null 2>&1
 		mv -v $PWD/.fcapollo/*.cas .
 	}
 	else
 	{
-		cleanCase
+        cleanTimeDirectories
+        rm -rf processor* > /dev/null 2>&1
 	}
 fi
 

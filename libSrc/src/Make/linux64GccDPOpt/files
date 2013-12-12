@@ -1,0 +1,9 @@
+# 1 "files"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "files"
+derivedFvPatchFields = fields/derivedFvPatchFields
+$(derivedFvPatchFields)/interiorScalarTensor/interiorTFvPatchScalarField.C
+$(derivedFvPatchFields)/interiorMixedScalarTensor/interiorTMixedFvPatchScalarField.C
+
+LIB = $(FOAM_USER_LIBBIN)/libFCAPOLLO

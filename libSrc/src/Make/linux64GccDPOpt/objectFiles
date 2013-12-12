@@ -1,0 +1,3 @@
+OBJECTS = \
+$(OBJECTS_DIR)/interiorTFvPatchScalarField.o\
+$(OBJECTS_DIR)/interiorTMixedFvPatchScalarField.o

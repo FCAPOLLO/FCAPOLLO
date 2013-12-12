@@ -85,12 +85,13 @@ do
 	echo -ne $line " "
 	for i in $line
 	do
-		echo -ne "      "$i
+		#echo -ne "      "$i
 		if [[ -f system/$i/decomposeParDict ]]; then
 			rm -f system/$i/decomposeParDict
 		fi
 	done
 done <regions.lst
+echo
 echo "done"
 echo
 # Clean the previous run data, note this was done with the cleanCase command

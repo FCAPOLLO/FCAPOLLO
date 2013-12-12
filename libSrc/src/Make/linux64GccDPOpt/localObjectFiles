@@ -1,0 +1,3 @@
+LOCAL_OBJECTS = \
+interiorTFvPatchScalarField.o\
+interiorTMixedFvPatchScalarField.o
